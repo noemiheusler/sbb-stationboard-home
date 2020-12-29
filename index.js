@@ -3,6 +3,9 @@ const departureHome = () => {
   const hours = new Date().getHours()
   const minutes = new Date().getMinutes()
 
+  const h2 = document.querySelector("h2");
+  h2.insertAdjacentHTML("afterbegin", `${hours}:${minutes}`)
+
   fetch(url)
     .then(response => response.json())
     .then((data) => {
